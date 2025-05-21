@@ -1,31 +1,24 @@
-class Celsius():
-
-    def converter_para(self,valor):
-        return valor
+class Usuario():
+    def __init__(self,nome,email,idade):
+        self.nome = nome
+        self.email = email
+        self.idade = idade
     
-class Fahrenheit():
-
-    def converter_para(self,valor):
-        return (valor-32)*5/9
+    def __str__(self):
+        return f'{self.nome} | {self.email} | {self.idade}'
     
-class Kelvin():
+class SistemaCadastro():
+    usuarios = []
 
-    def converter_para(self,valor):
-        return valor - 273
+    def adicionar_usuario(self,usuario):
+        self.usuarios.append(usuario)
     
-class ConversorFactory():
-    @staticmethod
+    def listar_usuarios(self):
+        print (f'{'Nome'.ljust(25)} | {'Email'.ljust(25)} | {'idade'}')
+        for usuario in SistemaCadastro.usuarios:
+            print (f'{usuario.nome.ljust(25)} | {usuario.email.ljust(25)} | {usuario.idade} ')
 
-    def obter_conversor(tipo):
-        if tipo == 'Celsius':
-            return Celsius()
-        elif tipo == 'Fahrenheit':
-            return Fahrenheit()
-        elif tipo == 'Kelvin':
-            return Kelvin()
-        else :
-            return 'Temperatura escolhida errada'
-        
-conversor = ConversorFactory.obter_conversor("Fahrenheit")
-print(conversor.converter_para(212))
-        
+usuario = Usuario("Camila", "camila@email.com", 25)
+cadastro = SistemaCadastro()
+cadastro.adicionar_usuario(usuario)
+cadastro.listar_usuarios()
