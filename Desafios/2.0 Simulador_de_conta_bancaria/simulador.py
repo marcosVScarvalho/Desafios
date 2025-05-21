@@ -12,7 +12,7 @@ class ContaBancaria():
         print (f'{self.saldo}')
 
     def negativo(self):
-        return 'Saldo Insuficiente' if self.sacar >= self.depositar else ''
+        return 'Saldo Insuficiente' if self.saldo - 0 else ''
     
 conta = ContaBancaria()
 conta.depositar(100)
