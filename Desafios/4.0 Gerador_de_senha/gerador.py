@@ -1,7 +1,7 @@
 import random
 import string
 
-class GeradorSenha():
+class GeradorSenha:
 
     @staticmethod
     
@@ -10,6 +10,6 @@ class GeradorSenha():
         senha = ''.join(random.choice(caracteres) for _ in range (comprimento))
         return senha
     
-print ('Senha nova gerada:')
+print('Senha nova gerada:')
 senha = GeradorSenha.gerar(12)
 print(senha)
