@@ -1,16 +1,16 @@
-class Celsius():
+class Celsius:
     def converter(self,valor):
         return valor
     
-class Fahrenheit():
+class Fahrenheit:
     def converter(valor):
         return (valor-32)*5/9
     
-class Kelvin():
+class Kelvin:
     def converter(valor):
         return valor - 273
     
-class ConversorFactory():
+class ConversorFactory:
     def obter_conversor(tipo):
         if tipo == 'Celsius':
             return Celsius()
