@@ -1,4 +1,4 @@
-class Contato():
+class Contato:
     def __init__(self,nome,telefone,email):
         self.nome = nome
         self.telefone = telefone
@@ -7,7 +7,7 @@ class Contato():
     def __str__(self):
         return f'{self.nome} | {self.telefone} | {self.email}'
     
-class Agenda():
+class Agenda:
     contatos = []
 
     def adicionar_contato(self, contato):
@@ -21,7 +21,7 @@ class Agenda():
 
     def carregar_de_arquivo():
         f = open('Salvar')
-        print (f.read())
+        print(f.read())
 
 
 contato = Contato("Ana", "11999999999", "ana@email.com")
